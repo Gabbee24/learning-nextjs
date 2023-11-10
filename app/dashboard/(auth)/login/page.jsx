@@ -3,6 +3,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { FcGoogle } from 'react-icons/fc';
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const LoginPage = () => {
   
@@ -69,6 +70,7 @@ const LoginPage = () => {
       <div className="border-2 my-5 border-t-stone-950 " >
       </div>
         <button onClick={() => signIn('google')} className='bg-yellow-500  mt-5 text-white p-2 rounded-lg px-4'> <h3 className='flex gap-1'> <span className='pt-1'><FcGoogle /></span>Login with Google </h3></button>
+        <Link href="/dashboard/register" >Create an account</Link>
     </div>
   )
 }

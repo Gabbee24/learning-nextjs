@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import {mongooseConnect} from "@/utils/db";
 import { Post } from "@/models/Post";
+import { mongooseConnect } from "@/utils/db";
 
 export const GET =async (request,{params}) => {
     const {id} = params;
