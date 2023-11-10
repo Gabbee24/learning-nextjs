@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+.containerr{
+  @apply max-w-[1366px] min-h-[100vh] flex flex-col py-0 md:px-24 px-6 mx-auto my-0
+}
+.title{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.image{
+  animation: move 3s infinite ease-in-out alternate;
+}
+@keyframes move{
+  from{
+    transform: translateY(-15px);
+  }
+  to{
+    transform: translateY(0px) scale(1.05);
+  }
+}
+
+.itemsss{
+  border: 5px solid #bbb;
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+}
+
+.itemsss:nth-child(1){
+  background: url("/book3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.itemsss:nth-child(2){
+  background: url("/compol.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.itemsss:nth-child(3){
+  background: url("/Vector2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.light{
+  @apply bg-white text-black
+}
+.dark{
+  @apply bg-black text-white
+}
+
+.theme{
+  transition: 1s all ease;
+}
