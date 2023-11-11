@@ -1,7 +1,10 @@
 import Image from "next/image";
+import FramerWrap from "@/components/framerMotion/FramerWrap";
 
 export default function Home() {
   return (
+    <FramerWrap>
+
     <div className="containerr" >
       <div className="flex gap-10 py-10" >
         <div className="w-1/2 pt-7 " >
@@ -14,5 +17,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </FramerWrap>
   )
 }
