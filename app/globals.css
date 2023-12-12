@@ -78,3 +78,22 @@ body {
 .theme{
   transition: 1s all ease;
 }
+
+.loading-spinner-big {
+  margin: 10px auto;
+  border: 3px solid #fff; /* Light grey */
+  border-top: 3px solid yellow; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

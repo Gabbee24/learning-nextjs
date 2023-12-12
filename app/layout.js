@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <AuthProvider>
             <Navbar />
-            <main>
+            <main className='h-screen' >
               {children}
             </main>
             <Footer />
